@@ -1,0 +1,74 @@
+block in append_cflags: checking for whether -fvisibility=hidden is accepted as CFLAGS... -------------------- yes
+
+"clang -fdeclspec -o conftest -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin22 -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -DUSE_FFI_CLOSURE_ALLOC -fno-common -pipe conftest.c  -L. -L/Users/mikuriyakenta/.rbenv/versions/3.0.2/lib -L. -L/Users/mikuriyakenta/.rbenv/versions/3.0.2/lib  -fstack-protector-strong  -m64   -lruby.3.0   "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"clang -fdeclspec -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin22 -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -DUSE_FFI_CLOSURE_ALLOC -fno-common -pipe -m64 -fvisibility=hidden -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+find_header: checking for prism.h in /Users/mikuriyakenta/dev/others/react-rails-todo-youtube/todo_back/vendor/bundle/ruby/3.0.0/gems/prism-0.17.1/include... -------------------- yes
+
+"clang -E -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin22 -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -DUSE_FFI_CLOSURE_ALLOC -fno-common -pipe -fvisibility=hidden  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'prism.h' file not found
+#include <prism.h>
+         ^~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <prism.h>
+/* end */
+
+"clang -E -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin22 -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -DUSE_FFI_CLOSURE_ALLOC -fno-common -pipe -fvisibility=hidden -I/Users/mikuriyakenta/dev/others/react-rails-todo-youtube/todo_back/vendor/bundle/ruby/3.0.0/gems/prism-0.17.1/include conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <prism.h>
+/* end */
+
+--------------------
+
+find_header: checking for prism/extension.h in /Users/mikuriyakenta/dev/others/react-rails-todo-youtube/todo_back/vendor/bundle/ruby/3.0.0/gems/prism-0.17.1/ext/prism/..... -------------------- yes
+
+"clang -E -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin22 -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/mikuriyakenta/dev/others/react-rails-todo-youtube/todo_back/vendor/bundle/ruby/3.0.0/gems/prism-0.17.1/include -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -DUSE_FFI_CLOSURE_ALLOC -fno-common -pipe -fvisibility=hidden  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'prism/extension.h' file not found
+#include <prism/extension.h>
+         ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <prism/extension.h>
+/* end */
+
+"clang -E -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin22 -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/mikuriyakenta/dev/others/react-rails-todo-youtube/todo_back/vendor/bundle/ruby/3.0.0/gems/prism-0.17.1/include -I/Users/mikuriyakenta/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -DUSE_FFI_CLOSURE_ALLOC -fno-common -pipe -fvisibility=hidden -I/Users/mikuriyakenta/dev/others/react-rails-todo-youtube/todo_back/vendor/bundle/ruby/3.0.0/gems/prism-0.17.1/ext/prism/.. conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <prism/extension.h>
+/* end */
+
+--------------------
+
